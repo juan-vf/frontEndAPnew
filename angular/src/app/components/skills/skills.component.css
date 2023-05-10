@@ -1,0 +1,33 @@
+section{
+    background-color: #051d3d;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 10px;
+    min-width: 350px;
+    border-radius: .4em;
+}
+.tittle{
+    font-weight: 800;
+    color: #9b9eb0;
+}
+.skills-group{
+    padding: .1em;
+    background-color: #6c49b6;
+    margin: 1em;
+    border-radius: .4em;
+}
+.skills-item{
+    /* text-align: center; */
+    background-color: #051d3d;
+    box-shadow: inset;
+    /* padding: 3em; */
+    /* margin: .5em; */
+    /* display: flex; */
+    border-radius: .4em;
+}
+.botones{
+    background-color: #d18a1d;
+    border-radius: 50%;
+    display: flex;
+    padding: .3em;
+    align-content: center;
+}

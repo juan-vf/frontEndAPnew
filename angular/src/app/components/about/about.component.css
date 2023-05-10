@@ -1,0 +1,101 @@
+section{
+    background-color: #151c3a;
+    color: #9b9eb0;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 10px;
+    min-width: 350px;
+    border-radius:5px;
+}
+.about h4{
+ font-size: 20px;
+}
+.userContainer{
+    position: relative;
+    /* max-height: 10px; */
+    /* max-width: 190px; */
+}
+.user-image{
+    object-fit: cover;
+    /* width:100%;
+    height:100%; */
+
+    top: -20vh;
+    left: -30vw;
+    max-width: 150px;
+    margin-top: 20px;
+    /* border: 5px solid #910d3f; */
+    position: absolute;
+    border-radius: 50%;
+}
+.tittle{
+    font-weight: 800;
+    text-align: center;
+}
+.personal-information{
+    background-color: #04040e;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.row div{
+    margin-bottom: 10px;
+}
+
+.botones {
+    background-color: #d18a1d ;
+    border-radius: 50%;
+}
+@media screen and (max-width: 767px) {
+    /* .user-image-container{
+        display: flex;
+        justify-content: center;
+    }
+    .user-image-container h3{
+        background-color: #910d3f;
+    }
+    .user-image{
+        min-width: 80px;
+    } */
+}
+@media screen and (max-width: 767px) {
+    /* .user-image-container{
+        display: flex;
+        justify-content: center;
+        position: relative;
+    } */
+    .user-image{
+        /* display: none; */
+        /* position: absolute;   */
+        /* top: 50vh;
+        left: 50vw; */
+        top: 0;
+        left: 0;
+        position: relative;
+    }
+}
+/* @media screen and (max-width: 767px) {
+    .user-image-container{
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    .user-image{
+
+        position: absolute;
+        bottom: 60%;
+        left: 10%;
+    }
+} */
+/* @media screen and (min-width: 767px) {
+    .user-image-container{
+        display: flex;
+        justify-content: center;
+    }
+    .user-image{
+
+        position: absolute;
+        top:42%;
+        left: 4%;
+    }
+} */

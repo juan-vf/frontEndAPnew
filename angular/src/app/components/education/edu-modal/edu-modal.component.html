@@ -1,0 +1,49 @@
+<div class="ExpAddContainer gx-0 gy-0 d-flex flex-column col-12">
+    <div class="closeButton">
+      <button class="rounded" (click)="closeModalEdu()">X</button>
+    </div>
+    <div>
+      <h2>
+        Carga tu educación
+      </h2>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="loadEdu()" novalidate>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="tittle" name="tittle" [(ngModel)]="tittle" required placeholder="Ej: Operario/Asistente.."/>
+        <label for="tittle">Titulo</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="instituteName" name="instituteName" [(ngModel)]="instituteName" required placeholder="">
+        <label for="instituteName">Nombre de la Institucion</label>
+      </div>
+      <div class="form-floating">
+        <input type="file" class="form-control" id="instituteLogo" name="instituteLogo" [(ngModel)]="instituteLogo" required placeholder="">
+        <label for="instituteLogo">Logo de la Institucion</label>
+      </div>
+      <div class="form-floating">
+        <input type="file" class="form-control" id="instituteCertification" name="instituteCertification" [(ngModel)]="instituteCertification" required placeholder="">
+        <label for="instituteCertification">Certificado obtenido</label>
+      </div>
+      <div class="form-floating">
+        <input type="date" class="form-control" id="startActivityDate" name="startActivityDate" [(ngModel)]="startActivityDate" required placeholder="">
+        <label for="startActivityDate">Fecha de inicio</label>
+      </div>
+      <div class="form-floating">
+        <input type="date" class="form-control" id="endActivityDate" name="endActivityDate" [(ngModel)]="endActivityDate" required placeholder="">
+        <label for="endActivityDate">Fecha de conclución</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="descriptionOptional" name="descriptionOptional" [(ngModel)]="descriptionOptional" required placeholder="">
+        <label for="descriptionOptional">descripción Opcional</label>
+      </div>
+      <!-- <div class="">
+        <p>Forgot password</p>
+      </div> -->
+      <div class="">
+        <button type="submit" class="btn btn-primary">Crear</button>
+      </div>
+    </form>
+
+    
+  </div>

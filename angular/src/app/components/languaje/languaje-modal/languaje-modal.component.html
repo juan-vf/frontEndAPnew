@@ -1,0 +1,27 @@
+<div class="gx-0 gy-0 d-flex flex-column col-12">
+    <div class="closeButton">
+        <button class="rounded" (click)="closeModalLang()">X</button>
+      </div>
+      <div>
+        <h2>
+          Lenguaje
+        </h2>
+      </div>
+      <form #f="ngForm" (ngSubmit)="loadLang()" novalidate>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="languaje" name="languaje" [(ngModel)]="languaje" required placeholder="Ej: "/>
+          <label for="languaje">Lenguaje</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="lanjuageDomain" name="lanjuageDomain" [(ngModel)]="lanjuageDomain" required placeholder="">
+          <label for="lanjuageDomain">Dominio del lenguaje</label>
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="lanjuageDomainNumber" name="lanjuageDomainNumber" [(ngModel)]="lanjuageDomainNumber" required placeholder="">
+            <label for="lanjuageDomainNumber">Dominio del lenguaje en porcentaje</label>
+          </div>
+        <div class="">
+          <button type="submit" class="btn btn-primary">Crear</button>
+        </div>
+      </form>
+</div>

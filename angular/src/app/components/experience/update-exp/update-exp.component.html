@@ -1,0 +1,41 @@
+<div class="ExpAddContainer gx-0 gy-0 d-flex flex-column col-12">
+    <div class="closeButton">
+      <button class="rounded" (click)="closeModalExpUpd()">X</button>
+    </div>
+    <div>
+      <h2>
+        Carga tu experiencia
+      </h2>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="updateExp()" novalidate>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="positionTitle" name="positionTitle" [(ngModel)]="expUp.positionTitle" required placeholder="Ej: Operario/Asistente.."/>
+        <label for="positionTitle">Titulo del puesto</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="descriptionOfActivities" name="descriptionOfActivities" [(ngModel)]="expUp.descriptionOfActivities" required placeholder="">
+        <label for="descriptionOfActivities">Descripción</label>
+      </div>
+      <div class="form-floating">
+        <input type="date" class="form-control" id="startActivityDate" name="startActivityDate" [(ngModel)]="expUp.startActivityDate" required placeholder="">
+        <label for="startActivityDate">Inicio de actividad</label>
+      </div>
+      <div class="form-floating">
+        <input type="date" class="form-control" id="endActivityDate" name="endActivityDate" [(ngModel)]="expUp.endActivityDate" required placeholder="">
+        <label for="endActivityDate">Final de actividad</label>
+      </div>
+      <div class="form-floating">
+        <input type="file" class="form-control" id="companyLogo" name="companyLogo" [(ngModel)]="expUp.companyLogo" required placeholder="">
+        <label for="companyLogo">logo de la compania/empresa</label>
+      </div>
+      <!-- <div class="">
+        <p>Forgot password</p>
+      </div> -->
+      <div class="">
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+      </div>
+    </form>
+
+    
+  </div>

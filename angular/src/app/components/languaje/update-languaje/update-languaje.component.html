@@ -1,0 +1,32 @@
+<div class="ExpAddContainer gx-0 gy-0 d-flex flex-column col-12">
+    <div class="closeButton">
+      <button class="rounded" (click)="closeModalLangUpd()">X</button>
+    </div>
+    <div>
+      <h2>
+        Actualiza tu lenguaje
+      </h2>
+    </div>
+    <form #f="ngForm" (ngSubmit)="updateLang()" novalidate>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="languaje" name="languaje" [(ngModel)]="langUp.languaje" required placeholder="Ej:"/>
+        <label for="languaje">Lenguaje</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="lanjuageDomain" name="lanjuageDomain" [(ngModel)]="langUp.lanjuageDomain" required placeholder="">
+        <label for="lanjuageDomain">Dominio del lenguaje</label>
+      </div>
+      <div class="form-floating">
+        <input type="number" class="form-control" id="lanjuageDomainNumber" name="lanjuageDomainNumber" [(ngModel)]="langUp.lanjuageDomainNumber" required placeholder="">
+        <label for="lanjuageDomainNumber">Dominio del lenguaje en porcentaje</label>
+      </div>
+      <!-- <div class="">
+        <p>Forgot password</p>
+      </div> -->
+      <div class="">
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+      </div>
+    </form>
+
+    
+  </div>

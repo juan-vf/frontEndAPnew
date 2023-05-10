@@ -1,0 +1,45 @@
+<div class="ExpAddContainer gx-0 gy-0 d-flex flex-column col-12">
+    <div class="closeButton">
+      <button class="rounded" (click)="closeModalPrjUpd()">X</button>
+    </div>
+    <div>
+      <h2>
+        Carga tu experiencia
+      </h2>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="updatePrj()" novalidate>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nameProject" name="nameProject" [(ngModel)]="prjUp.nameProject" required placeholder="Ej: Operario/Asistente.."/>
+            <label for="nameProject">Titulo del proyecto</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="descriptionProject-control" id="descriptionProject" name="descriptionProject" [(ngModel)]="prjUp.descriptionProject" required placeholder="">
+            <label for="descriptionProject">Descripción</label>
+          </div>
+          <div class="form-floating">
+            <input type="date" class="form-control" id="startActivityDate" name="startActivityDate" [(ngModel)]="prjUp.startActivityDate" required placeholder="">
+            <label for="startActivityDate">Inicio de actividad</label>
+          </div>
+          <div class="form-floating">
+            <input type="date" class="form-control" id="endActivityDate" name="endActivityDate" [(ngModel)]="prjUp.endActivityDate" required placeholder="">
+            <label for="endActivityDate">Final de actividad</label>
+          </div>
+          <div class="form-floating">
+            <input type="file" class="form-control" id=" imagesProject" name=" imagesProject" [(ngModel)]="prjUp.imagesProject" required placeholder="">
+            <label for=" imagesProject">Imagenes del proyecto</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="linkProject" name="linkProject" [(ngModel)]="prjUp.linkProject" required placeholder="">
+            <label for="linkProject">Link del proyecto</label>
+          </div>
+      <!-- <div class="">
+        <p>Forgot password</p>
+      </div> -->
+      <div class="">
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+      </div>
+    </form>
+
+    
+  </div>

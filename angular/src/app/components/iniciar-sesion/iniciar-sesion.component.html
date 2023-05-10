@@ -1,0 +1,39 @@
+<!-- <div class="containerModal d-flex"> -->
+
+  <div class="LoginContainer gx-0 gy-0 d-flex flex-column col-12">
+    <div class="closeButton">
+      <button class="rounded" (click)="closeModalLogin()">X</button>
+    </div>
+    <div>
+      <h2>
+        Iniciar sesion
+      </h2>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate >
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="userName" name="userName" [(ngModel)]="userName" required placeholder="Usuario"/>
+        <label for="userName">Tu Usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required placeholder="Contraseña">
+        <label for="password">Tu Contraseña</label>
+      </div>
+      <!-- <div class="">
+        <p>Forgot password</p>
+      </div> -->
+      <div class="">
+        <button type="submit" class="btn btn-primary">Iniciar</button>
+      </div>
+    </form>
+
+    
+  </div>
+<!-- </div> -->
+<!--<dialog open class="modalContainer d-flex">
+  <div class="modal_body d-flex">
+    <h3>modal</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam modi nulla repellat voluptas obcaecati! Voluptatum dolores minus ullam natus, consequuntur voluptates error maxime, quam velit porro sed modi nostrum pariatur?</p>
+    <button (click)="closeModalLogin()">x</button>
+  </div>
+</dialog>-->

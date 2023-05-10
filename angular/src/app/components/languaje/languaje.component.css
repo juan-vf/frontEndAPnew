@@ -1,0 +1,32 @@
+section{
+    background-color: #151c3a;
+    color:  #4eb4f0 ;
+    font-family: 'Nanum Gothic', sans-serif;
+    min-width: 350px;
+    margin: .5em;
+    padding: .5em;
+    border-radius:.3em;
+}
+.botones {
+    background-color: #d18a1d ;
+    border-radius: 50%;
+    padding: .3em;
+}
+
+.languaje-item {
+    background-color: #151c3a;
+    border: .3em solid #910d3f;
+    border-radius: .4em;
+    /* box-shadow: -0.1em -0.5em 4em 0 #910d3f; */
+}
+.tittle{
+    font-weight: bolder;
+    background-color: #075ea5;
+    border-radius: .4em;
+    text-shadow: 0em .5em .3em rgba(0,0,0,1);
+    color: #fff;
+}
+.properties{
+    background-color:  #33463e;
+    border-radius: .4em;
+}

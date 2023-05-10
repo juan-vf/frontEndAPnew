@@ -1,0 +1,27 @@
+/* .containerModal{
+    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    
+    align-items: center;
+} */
+.LoginContainer{
+    /* position: fixed; */
+     /* position: absolute; */
+    border-radius: .5em;
+    padding: 2em;
+    background-color: rgb(100, 100, 100, .5);
+    /* position: absolute; */
+    /* justify-content: center; */
+    align-items: center;
+    /* align-content: center; */
+    text-align: center;
+    /* width: 50vw; */
+    /* height: 70vh; */
+}

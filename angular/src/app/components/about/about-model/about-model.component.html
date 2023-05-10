@@ -1,0 +1,28 @@
+<div class="gx-0 gy-0 d-flex flex-column col-12">
+    <div class="closeButton">
+        <button class="rounded" (click)="closeModalAbt()">X</button>
+      </div>
+      <div>
+        <h2>
+          Sobre ti
+        </h2>
+      </div>
+  
+      <form #f="ngForm" (ngSubmit)="loadAbt()" novalidate>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="Title" name="Title" [(ngModel)]="Title" required placeholder="Ej: "/>
+          <label for="Title">Tu titulo</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="descriptionOfAbt" name="descriptionOfAbt" [(ngModel)]="descriptionOfAbt" required placeholder="">
+          <label for="descriptionOfAbt">Descripción</label>
+        </div>
+        <!-- <div class="">
+          <p>Forgot password</p>
+        </div> -->
+        <div class="">
+          <button type="submit" class="btn btn-primary">Crear</button>
+        </div>
+      </form>
+    <p>about-model works!</p>
+</div>

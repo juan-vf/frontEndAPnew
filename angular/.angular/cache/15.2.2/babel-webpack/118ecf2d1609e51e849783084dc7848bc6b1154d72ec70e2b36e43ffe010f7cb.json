@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Languaje {\n  constructor(languaje, lanjuageDomain, lanjuageDomainNumber) {\n    this.languaje = languaje;\n    this.lanjuageDomain = lanjuageDomain;\n    this.lanjuageDomainNumber = lanjuageDomainNumber;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

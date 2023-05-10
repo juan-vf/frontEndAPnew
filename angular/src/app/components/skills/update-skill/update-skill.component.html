@@ -1,0 +1,42 @@
+<p>update-about works!</p>
+<div class="gx-0 gy-0 d-flex flex-column col-12">
+    <div class="closeButton">
+        <button class="rounded" (click)="closeModalSkillUpd()">X</button>
+    </div>
+    <div>
+        <h2>
+            Skill
+        </h2>
+    </div>
+    <form #f="ngForm" (ngSubmit)="updateSkill()" novalidate>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nameSkill" name="nameSkill" [(ngModel)]="skill.nameSkill"
+                required placeholder="" />
+            <label for="nameSkill">Skill</label>
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="skillDomain" name="skillDomain" [(ngModel)]="skill.skillDomain"
+                required placeholder="">
+            <label for="skillDomain">Dominio de la Skill entre 0 a 100%</label>
+        </div>
+        <div class="form-floating">
+            <input type="checkbox" class="form-control" id="typeSoft" name="typeSoft" [(ngModel)]="skill.typeSoft"
+                required placeholder="">
+            <label for="typeSoft">soft</label>
+            <div class="d-flex" *ngIf="skill.typeSoft === true">
+                <h3> Soft Skill Check 👌</h3>
+            </div>
+        </div>
+        <div class="form-floating">
+            <input type="checkbox" class="form-control" id="typeHard" name="typeHard" [(ngModel)]="skill.typeHard"
+                required placeholder="">
+            <label for="typeHard">hard</label>
+            <div class="d-flex" *ngIf="skill.typeHard === true">
+                <h3> Hard Skill Check 👌</h3>
+            </div>
+        </div>
+        <div class="">
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
+    </form>
+</div>

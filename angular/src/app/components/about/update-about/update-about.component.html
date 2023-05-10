@@ -1,0 +1,26 @@
+<p>update-about works!</p>
+<div class="gx-0 gy-0 d-flex flex-column col-12">
+  <div class="closeButton">
+    <button class="rounded" (click)="closeModalAboutUpd()">X</button>
+  </div>
+  <div>
+    <h2>
+      Sobre ti
+    </h2>
+  </div>
+  <form #f="ngForm" (ngSubmit)="updateAbt()" novalidate>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="tittleAbout" name="tittleAbout" [(ngModel)]="about.tittleAbout"
+        required placeholder="" />
+      <label for="tittleAbout">Tu titulo</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="descriptionAbout" name="descriptionAbout"
+        [(ngModel)]="about.descriptionAbout" required placeholder="">
+      <label for="descriptionAbout">Descripción</label>
+    </div>
+    <div class="">
+      <button type="submit" class="btn btn-primary">Actualizar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,120 @@
+<section>
+    <div class="container">
+
+        <div class="row">
+            <h2 class="d-flex justify-content-center">Proyectos</h2>
+        </div>
+        <div>
+            <button type="button" (click)="openModalPrj()"  *ngIf="(isLogged && admin)" class="botones">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+              </svg>
+            </button>
+        </div>
+        <div class="modalAddPrj d-flex" *ngIf="modalPrj === true">
+            <app-prj-modal class="row gx-0 gy-0"></app-prj-modal>
+        </div>
+
+        <div class="project-group container-fluid">
+            <div class="project" *ngFor="let Project of project">
+                <div class="container project-group2">
+                    <div class="row project-item2">
+                        <h3>{{Project.nameProject}}</h3>
+                        <!-- el nombre,  -->
+                        <h4>{{convertDate(Project.startActivityDate)}} a {{convertDate(Project.endActivityDate)}}</h4>
+                        <!-- fecha de realización,  -->
+                    </div>
+                    <div class="row project-item2">
+                        <div class="col-lg-6 col-md-7 col-sm-12">
+                            <p>{{Project.descriptionProject}}</p>
+                            <!-- descripción del
+                    proyecto y el link a su 
+                    evidencia -->
+                        </div>
+                        <div class="img-project-container col-lg-6 col-md-5 col-sm-12">
+                            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/QTTK5B2SVZD4NBEYDMPX7SFSJE.jpg"
+                                alt="" class="img-fluid img-project-item2">
+                            <!-- , en este caso 
+                    podrías adjuntar 
+                    imágenes de ellos. -->
+                        </div>
+                    </div>
+                    <div class="row project-item2">
+                        <a href="{{Project.linkProject}}">link Project</a>
+                    </div>
+                    <div class="d-flex justify-content-evenly p-1" *ngIf="(isLogged && admin)">
+                        <button type="button" (click)="openModalExpUpd(Project.id)" routerLink="/updPrj/{{Project.id}}" class="rounded bg-transparent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#515aea" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                              </svg>
+                        </button>
+                        <div class="modalAddExp d-flex" *ngIf="modalPrjUpd === true">
+                            <app-update-exp class="row gx-0 gy-0" ></app-update-exp>
+                        </div>
+                        <button type="button" (click)="deletePrj(Project.id)"  class="rounded bg-transparent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#d32e2c" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                              </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row prueba-row">
+            <h4>fila</h4>
+            <div class="col">
+                columna
+                <div class="row">
+                    <div class="col">colu</div>
+                    <div class="col">colu</div>
+                </div>
+            </div>
+            <div class="col">
+                columna
+            </div>
+            <div class="col">
+                columna
+                <div class="row">
+                    <div class="col">colu<div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                    <div class="col">colu</div>
+                </div>
+            </div>
+        </div>
+        <div class="prejects-item">
+            <h3>Project name</h3> -->
+            <!-- el nombre,  -->
+            <!-- <h4>Date</h4> -->
+            <!-- fecha de realización,  -->
+            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facilis aliquam alias veniam
+                similique commodi aliquid exercitationem, rerum quasi reiciendis. Ducimus, tempora eveniet
+                molestias assumenda, reprehenderit, eum voluptatem temporibus voluptates consequatur ex numquam
+                unde corrupti? Minima error possimus nisi distinctio ea libero magnam inventore provident ullam
+                aspernatur ad repellat, similique, ipsum pariatur quam nobis tenetur mollitia fuga voluptas,
+                vitae omnis ut nostrum. Non voluptas eveniet ad fugit, assumenda adipisci animi aspernatur,
+                soluta expedita laborum sapiente aliquam odit omnis, voluptatem suscipit. Repudiandae vel iste
+                quisquam ab nemo perspiciatis quibusdam quos illum ea accusantium dicta ut debitis quam officiis
+                quas a maiores atque exercitationem libero, ullam sint dolore similique eum rerum? Aspernatur
+                nisi deserunt nesciunt a ipsa repudiandae, fuga delectus hic? Dignissimos cum repudiandae
+                adipisci aliquid ex enim, officiis quisquam omnis assumenda perspiciatis nemo perferendis error
+                iure pariatur rem incidunt, ab recusandae numquam, vel culpa modi quam! Quidem commodi libero
+                aliquid illum.</p> -->
+            <!-- descripción del
+        proyecto y el link a su 
+        evidencia -->
+            <!-- <div class="project-item">
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/QTTK5B2SVZD4NBEYDMPX7SFSJE.jpg"
+                    alt="" class="img-fluid img-project-item">
+            </div> -->
+            <!-- , en este caso 
+        podrías adjuntar 
+        imágenes de ellos. -->
+        <!-- </div> -->
+
+    </div>
+</section>
